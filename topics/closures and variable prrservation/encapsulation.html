@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Encapsulation:</h1>
+    <p>Ap puri destail inside a function hide kr deta ho aur bahir sirf otni info hoti ha jis ki zarorat hoti ha  </p>
+
+
+    <script>
+        function encapsulation(){
+            let c = 0;
+            return function(){
+                if(c<5){
+                    c++;
+                    console.log(`Numbers of time clicked is ${c}`)
+                }else{
+                    console.error(`limit exceeded try again`)
+                }
+            }
+        }
+        let fnc = encapsulation();
+        fnc();
+        fnc();
+        fnc();
+        fnc();
+        fnc();
+        fnc();
+
+        let c = 0;
+        // to is sa c ki value change nai hogi yeh aik naya global varable ha
+    </script>
+</body>
+</html>
