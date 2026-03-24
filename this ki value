@@ -1,0 +1,11 @@
+This ki value
+
+
+1- global scope                        =>window
+2- function                            =>window
+3- Method with es5 function            =>object
+4- Method with arrow function          =>window
+5- Es5 function inside es5 Method      =>window
+6- arrow function inside es5 function  =>object
+7- Class                               =>Blank object
+8- event handler                       =>element
