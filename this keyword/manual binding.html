@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> <pre>
+    1- Binding
+    2- call
+    3- Apply 
+    </pre>
+    </h1>
+
+    <p>
+        Function ka this ki value hm apni marzi sa set kr skty hain using bind, call and apply method. 
+    </p>
+
+    <script>
+        // call method
+        let object = {
+            profession : `web developer`,
+            name : `Hassan`,
+        }
+
+        function calling (){
+            console.log(this.name + `
+            `+ this.profession);
+        }
+        calling.call(object)
+
+        console.log(`-----------------------------`)
+        // call method
+        let object1 = {
+            name :`shahid`,
+            age: 22,
+        }
+
+        function appl(a, b, c){
+            console.log(this, a, b, c);
+        }
+        appl.call(object1, 8, 5, 2)
+
+
+        console.log(`-----------------------------`)
+        // bind method
+        let object2 = {
+            name :`hasan`,
+            age: 22,
+        }
+
+        function binding(a, b, c){
+            console.log(this, a, b, c);
+        }
+        let fnc = binding.bind(object2, 44, 55, 99)
+        fnc()
+    </script>
+</body>
+</html>
